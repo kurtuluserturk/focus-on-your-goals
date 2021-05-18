@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  overflow: hidden;
+  background: url(./images/main-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: linear-gradient(to bottom, #f1f4f9, #dff1ff);
+}
+
+section .color {
+  position: absolute;
+  filter: blur(150px);
+}
+
+section .color:nth-child(1) {
+  top: -350px;
+  width: 700px;
+  height: 700px;
+  background: #ff359b;
+}
+
+section .color:nth-child(2) {
+  bottom: -150px;
+  left: 100px;
+  width: 600px;
+  height: 600px;
+  background: #fffd87;
+}
+
+section .color:nth-child(3) {
+  bottom: 50px;
+  right: 150px;
+  width: 500px;
+  height: 500px;
+  background: #00d2ff;
+}
+
+.box {
+  position: relative;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  width: 400px;
+  min-height: 400px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+}
+
+.form {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+}
+
+.form h1 {
+  position: relative;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+}
+
+.form h1::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background: #fff;
+  width: 105px;
+  height: 4px;
+}
+
+.form .inputBox {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.form .inputBox input,
+.form .inputBox select {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px 20px;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 30px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form .inputBox select {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.form .inputBox input::placeholder {
+  color: #fff;
+}
+
+.form .inputBox input[type="submit"] {
+  background: #fff;
+  color: #666;
+  cursor: pointer;
+  font-weight: 600;
+}
