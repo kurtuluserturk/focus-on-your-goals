@@ -45,7 +45,7 @@ const UserProvider = ({ children }) => {
     }
 
     const handleConfirmClick = (e) => {
-        alert('The agreement confirmed')
+        alert('“DONE! You confirmed your goal. Time to get cracking!')
         setGoal('')
         setDeadline('')
         setRemainingDays('')
