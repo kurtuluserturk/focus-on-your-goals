@@ -1,10 +1,15 @@
 import './main.css';
 import Goal from './components/Goal';
+import Agreement from './components/Agreement';
+import { Route, Switch } from 'react-router';
 
 function App() {
   return (
     <div>
-      <Goal />
+      <Switch>
+        <Route exact path='/' component={Goal} />
+        <Route path='/agreement' component={Agreement} />
+      </Switch>
     </div>
   );
 }
