@@ -7,12 +7,20 @@
   font-family: "Montserrat", sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   overflow: hidden;
   background: url(./images/main-bg.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.text-center {
+  text-align: center;
 }
 
 section {
@@ -95,13 +103,32 @@ section .color:nth-child(3) {
   height: 4px;
 }
 
-.form .inputBox {
+.form .inputBox,
+.form .infoRow {
   width: 100%;
   margin-top: 20px;
 }
 
+.form .link {
+  padding: 15px;
+  font-weight: 700;
+  background: conic-gradient(from 0deg, #00f0f0 0 90deg, #0000 0) 0 0,
+    conic-gradient(from 90deg, #f00f00 0 90deg, #0000 0) 0 15px,
+    conic-gradient(from -90deg, #0ff000 0 90deg, #0000 0) 15px 0,
+    conic-gradient(from 180deg, #0000ff 0 90deg, #0000 0) 15px 15px;
+  background-size: 30px 30px;
+  background-blend-mode: screen;
+}
+
+.form .link:hover {
+  transition: 0.5s;
+  background-position: 0 0, 0 45px, 45px 0, 45px 45px;
+}
+
 .form .inputBox input,
-.form .inputBox select {
+.form .inputBox select,
+.form .infoRow p,
+.form .infoRow input {
   width: 100%;
   background: rgba(255, 255, 255, 0.2);
   padding: 10px 20px;
@@ -122,9 +149,23 @@ section .color:nth-child(3) {
   color: #fff;
 }
 
-.form .inputBox input[type="submit"] {
+.form .inputBox input[type="submit"],
+.form .infoRow input[type="submit"] {
   background: #fff;
   color: #666;
   cursor: pointer;
   font-weight: 600;
+  background: linear-gradient(
+      -45deg,
+      transparent calc(100% / 3),
+      rgba(0, 0, 0, 0.5),
+      transparent calc(200% / 3)
+    )
+    bottom right/350% 100% no-repeat;
+  transition: 0.5s linear;
+}
+
+.form .inputBox input[type="submit"]:hover,
+.form .infoRow input[type="submit"]:hover {
+  background-position: bottom left;
 }
